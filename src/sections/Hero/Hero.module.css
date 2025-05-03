@@ -1,0 +1,44 @@
+.imageContainer {
+    position: relative;
+    display: inline-block; /* O block, dependiendo de cómo quieras que se comporte el contenedor */
+}
+
+.imageContainer img {
+    display: block;
+    width: 100vw;
+    height: 400px;
+    background-size: cover;
+}
+
+.overlayText {
+    position: absolute;
+}
+
+.top {
+    top: 70%;
+    left: 5%;
+    transform: translate(0, 0); /* Reinicia la transformación de centrado */
+}
+
+.bottom{
+    bottom: 16%;
+    left: 5%;
+    transform: translate(0, 0); /* Reinicia la transformación de centrado */
+    text-align: right; /* Cambia la alineación si es necesario */ 
+}
+
+.button {
+    background-color: black;
+    color: white;
+    margin-right:10px ;
+
+    &:hover {
+        background-color: rgba(100, 100, 100, 0.934);
+        color: white;
+    }
+}
+
+.buttonBottom{
+    background-color: transparent;
+    color: rgb(255, 251, 0);
+}

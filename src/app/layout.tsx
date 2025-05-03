@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Exo_2 } from "next/font/google";
 import "./globals.css";
 import Header from '../components/Header/Header'
+import Hero from "@/sections/Hero/Hero";
 
 
 const exo2 = Exo_2({
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${exo2.variable} font-sans`}>
         <Header/>
+        <Hero/>
       </body>
     </html>
   );
