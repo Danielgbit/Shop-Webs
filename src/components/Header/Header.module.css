@@ -1,10 +1,10 @@
 .navbar {
   display: flex;
   gap: 20px;
-  background-color: rgba(95, 95, 95, 0.251);
+  background: linear-gradient(90deg,rgba(0, 0, 0, 1) 43%, rgba(255, 255, 255, 1) 100%);
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.3rem 1rem;
   border-radius: 15px;
   margin: 10px 10%;
 }
@@ -35,12 +35,12 @@
 }
 
 .button {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 
   &:hover{
-    background-color: rgba(155, 155, 155, 0.42);
-    color:white;
+    background-color: rgba(65, 65, 65, 0.42);
+    color:black;
   }
 }
 

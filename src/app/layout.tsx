@@ -4,6 +4,11 @@ import "./globals.css";
 import Header from '../components/Header/Header'
 import Hero from "@/sections/Hero/Hero";
 
+//FONT AWESOME
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css'; // Importa los estilos
+import WhatIncluded from "@/sections/WhatIncluded/WhatIncluded";
+config.autoAddCss = false; // Evita la doble carga de CSS
 
 const exo2 = Exo_2({
   variable: "--font-exo2",
@@ -26,6 +31,7 @@ export default function RootLayout({
       <body className={`${exo2.variable} font-sans`}>
         <Header/>
         <Hero/>
+        <WhatIncluded/>
       </body>
     </html>
   );
