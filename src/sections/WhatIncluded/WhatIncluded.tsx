@@ -1,4 +1,5 @@
 import styles from './WhatIncluded.module.css'
+import image from '../../../public/images/scheme.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Íconos sólidos (free-solid-svg-icons)
@@ -19,17 +20,17 @@ const WhatIncluded = () => {
       <div className={styles.content}>
         <h2 className={styles.title}>¿Qué incluye la landing de $300.000?</h2>
         <ul className={styles.list}>
-            <li className={styles.item}><FontAwesomeIcon icon={faPalette} className="mr-2" /> Diseño profesional 100% personalizado</li>
-            <li className={styles.item}><FontAwesomeIcon icon={faMobileScreenButton} className="mr-2" /> Optimizada para celulares</li>
-            <li className={styles.item}><FontAwesomeIcon icon={faBolt} className="mr-2" /> Carga rápida y segura</li>
-            <li className={styles.item}><FontAwesomeIcon icon={faEnvelope} className="mr-2" /> Formularios de contacto funcionales</li>
-            <li className={styles.item}><FontAwesomeIcon icon={faWhatsapp} className="mr-2" /> Conexión a WhatsApp</li>
-            <li className={styles.item}><FontAwesomeIcon icon={faServer} className="mr-2" /> Hosting gratis por 1 año (si lo ofreces)</li>
-            <li className={styles.item}><FontAwesomeIcon icon={faHeadset} className="mr-2" /> Soporte y cambios básicos</li>
+            <li className={styles.item}><FontAwesomeIcon icon={faPalette} className={styles.icon} /> Diseño profesional 100% personalizado</li>
+            <li className={styles.item}><FontAwesomeIcon icon={faMobileScreenButton} className={styles.icon} /> Optimizada para celulares</li>
+            <li className={styles.item}><FontAwesomeIcon icon={faBolt} className={styles.icon} /> Carga rápida y segura</li>
+            <li className={styles.item}><FontAwesomeIcon icon={faEnvelope} className={styles.icon} /> Formularios de contacto funcionales</li>
+            <li className={styles.item}><FontAwesomeIcon icon={faWhatsapp} className={styles.icon} /> Conexión a WhatsApp</li>
+            <li className={styles.item}><FontAwesomeIcon icon={faServer} className={styles.icon} /> Hosting gratis por 1 año (si lo ofreces)</li>
+            <li className={styles.item}><FontAwesomeIcon icon={faHeadset} className={styles.icon} /> Soporte y cambios básicos</li>
         </ul>
       </div>
       <div className={styles.imageWrapper}>
-        <img className={styles.image} alt="scheme" />
+        <img src={image.src} className={styles.image} alt="scheme" />
       </div>
     </section>
 }

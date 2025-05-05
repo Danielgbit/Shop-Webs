@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Exo_2 } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from '../components/Header/Header'
 import Hero from "@/sections/Hero/Hero";
@@ -10,9 +10,10 @@ import '@fortawesome/fontawesome-svg-core/styles.css'; // Importa los estilos
 import WhatIncluded from "@/sections/WhatIncluded/WhatIncluded";
 config.autoAddCss = false; // Evita la doble carga de CSS
 
-const exo2 = Exo_2({
-  variable: "--font-exo2",
-  subsets: ["latin"],
+const poppins = Poppins({
+  variable: '--font-poppins',
+  subsets: ['latin'],
+  weight: '400'
 });
 
 
@@ -28,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${exo2.variable} font-sans`}>
+      <body className={`${poppins.variable} font-sans`}>
         <Header/>
         <Hero/>
         <WhatIncluded/>

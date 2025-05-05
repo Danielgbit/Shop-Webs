@@ -12,6 +12,7 @@
 
 .overlayText {
     position: absolute;
+    color: white;
 }
 
 .top {
@@ -19,7 +20,6 @@
     left: 5%;
     transform: translate(0, 0);
     font-size: 2rem;
-    color: black;
 }
 
 .bottom{
@@ -36,11 +36,11 @@
 
     &:hover {
         background-color: rgba(100, 100, 100, 0.934);
-        color: white;
+        color: rgb(17, 16, 11);
     }
 }
 
 .buttonBottom{
     background-color: transparent;
-    color: rgb(255, 251, 0);
+    color: #b5891b;
 }
