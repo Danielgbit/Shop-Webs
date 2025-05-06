@@ -17,6 +17,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'; // Importa los estilos
 //SECTIONS
 import WhatIncluded from "@/sections/WhatIncluded/WhatIncluded";
 import Portafolio from "@/sections/Portafolio/Portafolio";
+import Testimonials from "@/sections/Testimonials/Testimonials";
 config.autoAddCss = false; // Evita la doble carga de CSS
 
 
@@ -37,6 +38,7 @@ export default function RootLayout({
         <Hero/>
         <WhatIncluded/>
         <Portafolio/>
+        <Testimonials/>
       </body>
     </html>
   );

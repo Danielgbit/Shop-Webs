@@ -7,7 +7,7 @@ import landingTwo from '../../../public/images/landing-page-2.png'
 
 const Portafolio = () => {
   return <section className={styles.portafolioSection}>
-    <div className={styles.title}>Portafolio</div>
+    <span className={styles.title}>Portafolio</span>
     <div className={styles.headlineSection}>
         <h3 className={styles.headline}>Mira algunos ejemplos recientes</h3>
         <p className={styles.description}>Cada landing page que desarrollo está diseñada a la medida de las necesidades del cliente, cuidando tanto la estética como el rendimiento. </p>  
