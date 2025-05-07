@@ -17,7 +17,7 @@
         margin: 3% 5%;
         
 
-        .testimonial {
+        .card {
             background: linear-gradient(90deg,rgba(77, 66, 30, 0.313) 0%, rgba(120, 93, 25, 0.619) 0%, rgba(0, 0, 0, 0.135) 100%);
             box-shadow: 2px 3px 4px -2px #eccf6f;
             padding: 30px 10px;
