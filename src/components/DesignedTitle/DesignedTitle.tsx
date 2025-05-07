@@ -1,9 +1,12 @@
+import React from 'react'
 import styles from './DesignedTitle.module.css'
 
-const DesignedTitle = ({ props }) => {
-  return <span className={styles.title}>
-    
-  </span>
+interface titleProps {
+  title: string
+}
+
+const DesignedTitle: React.FC<titleProps> = ({ title }) => {
+  return <span className={styles.title}>{title}</span>
 }
 
 export default DesignedTitle

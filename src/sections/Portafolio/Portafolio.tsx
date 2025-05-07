@@ -3,11 +3,14 @@ import styles from './Portafolio.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import landingOne from '../../../public/images/landing-page-1.png'
 import landingTwo from '../../../public/images/landing-page-2.png'
+import DesignedTitle from '@/components/DesignedTitle/DesignedTitle'
 
 
 const Portafolio = () => {
   return <section className={styles.portafolioSection}>
-    <span className={styles.title}>Portafolio</span>
+      <DesignedTitle
+        title='Portafolio'
+      />
     <div className={styles.headlineSection}>
         <h3 className={styles.headline}>Mira algunos ejemplos recientes</h3>
         <p className={styles.description}>Cada landing page que desarrollo está diseñada a la medida de las necesidades del cliente, cuidando tanto la estética como el rendimiento. </p>  
