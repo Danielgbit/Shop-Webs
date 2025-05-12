@@ -2,13 +2,14 @@ import DesignedTitle from "@/components/DesignedTitle/DesignedTitle"
 import styles from './Testimonials.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons"
+import MainTitle from "@/components/MainTitle/MainTitle"
 
 const Testimonials = () => {
   return <section className={styles.testimonialsSection}>
     <DesignedTitle
         title="Testimonios"
     />
-    <h4 className={styles.headLine}>Lo que dicen quienes ya tienen su landing</h4>
+    <MainTitle className="" title="Lo que dicen quienes ya tienen su landing"/>
     <div className={styles.testimonialsContainer}>
         <div className={styles.card}>
             <FontAwesomeIcon icon={faUserCircle} className={styles.icon}/>
