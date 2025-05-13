@@ -1,4 +1,4 @@
-import { faHtml5, faJs, faNode, faReact } from '@fortawesome/free-brands-svg-icons'
+import { faHtml5, faJs, faNode, faReact, faWordpress } from '@fortawesome/free-brands-svg-icons'
 import styles from './Portafolio.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import landingOne from '../../../public/images/landing-page-1.png'
@@ -27,6 +27,7 @@ const Portafolio = () => {
             <li className={styles.toolItem}> <FontAwesomeIcon icon={faJs}/> JavaScript</li>
             <li className={styles.toolItem}> <FontAwesomeIcon icon={faNode}/> NodeJS</li>
             <li className={styles.toolItem}> <FontAwesomeIcon icon={faHtml5}/> HTML</li>
+            <li className={styles.toolItem}> <FontAwesomeIcon icon={faWordpress}/> WordPress</li>
         </ul>
       </div>
     </section>

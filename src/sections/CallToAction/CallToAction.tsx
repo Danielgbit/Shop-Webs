@@ -11,7 +11,7 @@ const CallToAction = () => {
       />
       <div className={styles.buttonWrapper}>
         <Link
-          href="https://wa.me/573001112233"
+          href="https://wa.me/573024932976"
           target="_blank"
           className={styles.button}
         >

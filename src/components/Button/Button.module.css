@@ -1,14 +1,17 @@
 .button {
    border-radius: 10px;
-   padding: 10px 20px;
+   padding: 5px 10px;
    font-style: none;
    text-decoration: none;
    font-size: 14px;
-   letter-spacing: -0.2px;
+   letter-spacing: -0.5px;
    font-weight: 600;
    transition: all 0.3s ease-in-out ;
+   background-color: #fff1c5;
+   color: #2b2204;
 
    &:hover {
     letter-spacing: -0.1px;
+    color: #fff6d9;
    }
 }

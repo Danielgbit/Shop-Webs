@@ -1,32 +1,57 @@
-.imageContainer {
-    position: relative;
-    display: inline-block; /* O block, dependiendo de cómo quieras que se comporte el contenedor */
-}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 0;
 
-.imageContainer img {
-    display: block;
-    width: 100vw;
-    height: 400px;
-    background-size: cover;
+    .imagesWrapper {
+
+        display: flex;
+
+        .laptop {
+            width: 200px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                transform: translateY(-10px);
+                
+
+                & + .shadowLaptop {
+                    background-color: rgb(0, 0, 0);
+                    border-radius: 50%;
+                    width: 120px;
+                    padding: 0;
+                    margin: auto;
+                    box-shadow: 2px 2px 30px 2px #ffdf8d;
+                    transition: all 0.8s ease-in-out;
+                }
+            }
+        } 
+
+        .tablet {
+            width: 200px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                transform: translateY(-10px);
+
+                & + .shadowtablet {
+                    background-color: rgb(0, 0, 0);
+                    border-radius: 50%;
+                    width: 80px;
+                    padding: 0;
+                    margin: auto;
+                    box-shadow: 2px 2px 30px 2px #ffdf8d;
+                    transition: all 0.8s ease-in-out;
+                }
+            }
+        }
+    }
 }
 
 .overlayText {
-    position: absolute;
     color: white;
-}
-
-.top {
-    bottom: 20%;
-    left: 5%;
-    transform: translate(0, 0);
-    font-size: 2rem;
-}
-
-.bottom{
-    bottom: 7.5%;
-    left: 5%;
-    transform: translate(0, 0); /* Reinicia la transformación de centrado */
-    text-align: right; /* Cambia la alineación si es necesario */ 
 }
 
 .button {
@@ -35,7 +60,7 @@
     margin-right:10px ;
 
     &:hover {
-        background-color: rgba(100, 100, 100, 0.934);
+        background-color: #ffdf8d;
         color: rgb(17, 16, 11);
     }
 }

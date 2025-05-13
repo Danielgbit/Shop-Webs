@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./Header.module.css";
 import LinkButton from "../Button/LinkButton";
-import logo from '../../../public/images/logo.jpg'
+import logo from '../../../public/images/logo.png'
 
 const Header = () => {
   return (
@@ -30,7 +30,7 @@ const Header = () => {
             </Link>
           </li>
         </ul>
-        <LinkButton href={'#'} className={styles.button}>
+        <LinkButton href="https://wa.me/573024932976" className={styles.button}>
           ¡Solicita la tuya!
         </LinkButton>
       </nav>

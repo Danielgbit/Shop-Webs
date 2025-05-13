@@ -2,8 +2,8 @@
   display: flex;
   gap: 20px;
   justify-content: space-between;
-  background: linear-gradient(90deg,rgb(35, 28, 6) 0%, rgba(77, 66, 30, 1) 65%, rgb(0, 0, 0) 100%);
   align-items: center;
+  background: linear-gradient(90deg,rgba(153, 137, 87, 1) 51%, rgba(0, 0, 0, 1) 100%);
   padding: 0.3rem 1rem;
   border-radius: 15px;
   margin: 10px 10%;
@@ -26,11 +26,12 @@
   text-decoration: none;
   color: white;
   font-size: 14px;
-  letter-spacing: -1px;
-  transition: color 0.3s ease; /* Transición suave al pasar el ratón */
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 600;
 
   &:hover {
-    color: #007bff; /* Color al pasar el ratón */
+    color: #fff4d0; /* Color al pasar el ratón */
   }
 }
 
@@ -53,6 +54,7 @@
     opacity: 0.8;
     transform: scale(1.05);
     transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+    cursor: pointer;
   }
 }
 
