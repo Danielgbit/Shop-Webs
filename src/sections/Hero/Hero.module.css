@@ -1,6 +1,5 @@
 .hero {
-  background: linear-gradient(135deg, #2d2609, #886f1d);
-  padding: 5rem 2rem;
+  padding: 8rem 2rem;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -34,13 +33,14 @@
 }
 
 .title span {
-  color: #f4c839;
+  color: #fee79a;
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  color: #cbd5e1;
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #f9eab8;
+  margin: 50px 0;
+  letter-spacing: -0.8px;
 }
 
 
