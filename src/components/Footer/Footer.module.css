@@ -1,88 +1,113 @@
 .footer {
-  background-color: #11111123;
-  padding: 3rem 2rem;
+  background: #251e04b3;
+  color: #ffeca6;
+  padding: 4rem 2rem 2rem;
+  margin-top: 10rem;
   font-size: 0.95rem;
 }
 
-.content {
+.container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 2rem;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.brand {
-  flex: 1;
+.section {
+  flex: 1 1 200px;
   min-width: 200px;
 }
 
 .logo {
   font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #dfbf49;
+  margin-bottom: 1rem;
 }
 
-.tagline {
-  color: #ccc;
+.description {
+  line-height: 1.6;
+  color: #f9e6a4;
+  letter-spacing: -0.8px;
   font-size: 14px;
-  letter-spacing: -0.4px;
 }
 
-.contact, .social {
-  flex: 1;
-  min-width: 200px;
+.title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffe895;
 }
 
-.contactTitle {
-  font-weight: bold;
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navList li {
   margin-bottom: 0.5rem;
 }
 
+.navList a,
 .link {
-  display: flex;
-  align-items: center;
-  color: #ccc;
+  color: #faedbd;
   text-decoration: none;
-  margin-bottom: 0.5rem;
-  transition: color 0.3s;
-  font-size: 12px;
-  letter-spacing: -0.6px;
+  transition: color 0.3s ease;
+  letter-spacing: -0.8px;
+  font-size: 14px;
 }
 
+.navList a:hover,
 .link:hover {
-  color: #d7b030;
+  color: #ffe895;
 }
 
-.icon {
-  margin-right: 0.5rem;
-  font-size: 1rem;
-  color: #fff0bf;
+.socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.socials a {
+  color: #f9e6a4;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #7b6517;
 }
 
 .bottom {
-  border-top: 1px solid #333;
+  border-top: 1px solid #947918;
   margin-top: 2rem;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   text-align: center;
-  font-size: 0.85rem;
-  color: #aaa;
-
-  p {
-    font-size: 10px;
-  }
+  font-size: 0.7rem;
+  color: #ffe895;
+  letter-spacing: -0.8px;
 }
 
 .legalLink {
-  display: block;
-  margin-top: 0.5rem;
-  color: white;
+  margin-left: 1rem;
+  color: #ffe895;
   text-decoration: none;
-  font-size: 14px;
-  letter-spacing: -0.5px;
 }
 
 .legalLink:hover {
-  color: #fff0bf;
+  color: #ffe895;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.contact .link {
+  font-size: 12px;
 }

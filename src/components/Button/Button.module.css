@@ -12,6 +12,8 @@
 
    &:hover {
     letter-spacing: -0.1px;
-    color: #fff6d9;
+    color: #fde79f;
+    background-color: #8a7530;
    }
 }
+

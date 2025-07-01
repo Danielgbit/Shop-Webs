@@ -3,10 +3,10 @@
   gap: 20px;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg,rgba(153, 137, 87, 1) 51%, rgba(0, 0, 0, 1) 100%);
+  background: linear-gradient(90deg,#856e23 51%, #604b07 100%);
   padding: 0.3rem 1rem;
   border-radius: 30px;
-  margin: 10px 5%;
+  margin: 2rem 5%;
 }
 
 .navItem {

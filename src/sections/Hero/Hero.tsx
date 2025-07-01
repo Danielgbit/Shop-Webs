@@ -1,6 +1,5 @@
 import LinkButton from "@/components/Button/LinkButton";
 import styles from "./Hero.module.css";
-import MainTitle from "@/components/MainTitle/MainTitle";
 import laptop from "../../../public/images/laptop.png";
 import tablet from "../../../public/images/tablet.png";
 

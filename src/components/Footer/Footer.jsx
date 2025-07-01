@@ -2,43 +2,77 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
-import { faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faMailBulk } from '@fortawesome/free-solid-svg-icons';
-import styles from './Footer.module.css'
+import {
+  faInstagram,
+  faWhatsapp,
+  faFacebook,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import styles from './Footer.module.css';
+import logo from '../../../public/images/logo.png';
+import Image from 'next/image';
 
 const Footer = () => {
-  return <footer className={styles.footer}>
-      <div className={styles.content}>
-        <div className={styles.brand}>
-          <p className={styles.logo}>FocusWEB</p>
-          <p className={styles.tagline}>Páginas de destino personalizadas que convierten.</p>
+  return (
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        {/* Marca */}
+        <div className={styles.section}>
+          <Image alt='Logo' src={logo} className={styles.logo}/>
+          <p className={styles.description}>
+            Creamos landing pages efectivas que generan resultados reales. Entregas rápidas, diseño limpio y enfoque en conversión.
+          </p>
         </div>
 
-        <div className={styles.contact}>
-          <p className={styles.contactTitle}>Contacto</p>
-          <a href="focusweb:info@landingbuilder.com" className={styles.link}>
-            <FontAwesomeIcon icon={faMailBulk} className={styles.icon} /> info@FocusWEB.com
+        {/* Navegación */}
+        <div className={styles.section}>
+          <h4 className={styles.title}>Navegación</h4>
+          <ul className={styles.navList}>
+            <li><Link href="/">Inicio</Link></li>
+            <li><Link href="/#beneficios">Beneficios</Link></li>
+            <li><Link href="/#planes">Planes</Link></li>
+            <li><Link href="/#faq">Preguntas</Link></li>
+          </ul>
+        </div>
+
+        {/* Contacto */}
+        <div className={styles.contact}>  
+          <h4 className={styles.title}>Contacto</h4>
+          <a href="mailto:info@FocusWEB.com" className={styles.link}>
+            <FontAwesomeIcon icon={faEnvelope} /> info@FocusWEB.com
           </a>
           <a href="https://wa.me/573001112233" target="_blank" className={styles.link}>
-            <FontAwesomeIcon icon={faWhatsapp} className={styles.icon} /> WhatsApp Soporte
+            <FontAwesomeIcon icon={faWhatsapp} /> WhatsApp
           </a>
         </div>
 
-        <div className={styles.social}>
-          <p className={styles.contactTitle}>Siguenos</p>
-          <a href="https://instagram.com/youraccount" target="_blank" className={styles.link}>
-            <FontAwesomeIcon icon={faInstagram} className={styles.icon} /> Instagram
-          </a>
+        {/* Redes Sociales */}
+        <div className={styles.section}>
+          <h4 className={styles.title}>Síguenos</h4>
+          <div className={styles.socials}>
+            <a href="https://instagram.com/youraccount" target="_blank" aria-label="Instagram">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a href="https://facebook.com/youraccount" target="_blank" aria-label="Facebook">
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
+            <a href="https://linkedin.com/in/youraccount" target="_blank" aria-label="LinkedIn">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+          </div>
         </div>
       </div>
 
-    <div className={styles.bottom}>
+      {/* Línea inferior */}
+      <div className={styles.bottom}>
         <p>&copy; {new Date().getFullYear()} FocusWEB. Todos los derechos reservados.</p>
         <Link href="/privacy-policy" className={styles.legalLink}>
-          Privacy Policy
+          Política de privacidad
         </Link>
       </div>
     </footer>
-}
+  );
+};
 
-export default Footer
+export default Footer;
