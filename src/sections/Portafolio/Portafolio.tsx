@@ -17,7 +17,7 @@ import Image from "next/image";
 
 const Portafolio = () => {
   return (
-    <section className={styles.portafolioSection}>
+    <section id="ejemplos" className={styles.portafolioSection}>
       <DesignedTitle title="Portafolio" />
       <div className={styles.headlineSection}>
         <MainTitle className="" title="Mira algunos ejemplos recientes" />

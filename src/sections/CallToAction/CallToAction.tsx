@@ -4,7 +4,7 @@ import LinkButton from "@/components/Button/LinkButton";
 
 const CallToAction = () => {
   return (
-    <section className={styles.section}>
+    <section id="contacto" className={styles.section}>
       <MainTitle
         className=""
         title="¿Listo para tener tu landing profesional?"

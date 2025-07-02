@@ -44,7 +44,7 @@ const features = [
 
 const WhatIncluded = () => {
   return (
-    <section className={styles.container}>
+    <section id='que-incluye' className={styles.container}>
       <div className={styles.content}>
         <h2 className={styles.title}>¿Qué incluye la landing de $300.000?</h2>
         <ul className={styles.list}>

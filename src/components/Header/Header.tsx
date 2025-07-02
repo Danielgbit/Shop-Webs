@@ -11,6 +11,7 @@ const navItems = [
   { label: "Qué incluye", href: "#que-incluye" },
   { label: "Ejemplos", href: "#ejemplos" },
   { label: "Contacto", href: "#contacto" },
+  { label: "Testimonios", href: "#testimonios" },
 ];
 
 const Header = () => {

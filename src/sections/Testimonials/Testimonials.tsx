@@ -6,7 +6,7 @@ import MainTitle from "@/components/MainTitle/MainTitle";
 
 const Testimonials = () => {
   return (
-    <section className={styles.testimonialsSection}>
+    <section id="testimonios" className={styles.testimonialsSection}>
       <DesignedTitle title="Testimonios" />
       <MainTitle
         className=""
