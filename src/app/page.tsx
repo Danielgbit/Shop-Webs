@@ -1,5 +1,4 @@
 import Hero from "@/sections/Hero/Hero";
-import styles from "./page.module.css";
 import WhatIncluded from "@/sections/WhatIncluded/WhatIncluded";
 import Portafolio from "@/sections/Portafolio/Portafolio";
 import Testimonials from "@/sections/Testimonials/Testimonials";
@@ -11,16 +10,16 @@ import Comparison from "@/sections/Comparison/Comparison";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div >
       <Hero />
-      <WhatIncluded />
+{/*       <WhatIncluded />
       <Portafolio />
       <Testimonials />
       <CallToAction />
       <Pricing/>
       <ProcessSteps/>
       <TargetAudience/>
-      <Comparison/>
+      <Comparison/> */}
     </div>
   );
 }

@@ -1,12 +1,13 @@
+/* === Navbar general === */
 .navbar {
   display: flex;
-  gap: 20px;
   justify-content: space-between;
   align-items: center;
+  margin: 1rem 20px;
+  gap: 20px;
   background: linear-gradient(90deg, #856e23db 51%, #604b07a0 100%);
   padding: 0.3rem 0.8rem;
   border-radius: 30px;
-  margin: 1rem 5%;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,67 +15,76 @@
   z-index: 100;
   box-shadow: 0 2px 10px #2e2404;
   transition: transform 0.3s ease-in-out;
+  width: 100%;
 }
 
 .hidden {
   transform: translateY(-300%);
 }
 
-.navItem {
-  margin-left: 50px;
+/* === Logo === */
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+  cursor: pointer;
 }
 
+.logo:hover {
+  opacity: 0.8;
+}
+
+/* === Lista de navegación principal (desktop) === */
 .navList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin: 0;
 }
 
 .navLink {
   text-decoration: none;
   color: #fffbee;
   font-size: 13px;
-  transition: color 0.3s ease;
   font-weight: 100;
-
-  &:hover {
-    color: #ffdf77; /* Color al pasar el ratón */
-  }
+  transition: color 0.3s ease;
 }
 
-.button {
-  background-color: white;
-  color: black;
-
-  &:hover {
-    background-color: #826a2e9a;
-    color: #fff6df;
-  }
-}
-
-.logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-
-  &:hover {
-    opacity: 0.8;
-    transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
-    cursor: pointer;
-  }
+.navLink:hover {
+  color: #ffdf77;
 }
 
 .activeLink {
-  /* Estilo para el enlace activo (opcional) */
   color: #007bff;
   font-weight: bold;
 }
 
+/* === Botón especial === */
+.button {
+  background-color: white;
+  color: black;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #826a2e9a;
+  color: #fff6df;
+}
+
+/* === Botón del menú móvil (hamburguesa) === */
 .mobileMenuButton {
-  /* Estilos para el botón del menú móvil (para pantallas pequeñas) */
-  display: none; /* Oculto por defecto en pantallas grandes */
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
@@ -82,31 +92,34 @@
 }
 
 .mobileMenuIcon {
-  /* Estilos para el icono dentro del botón del menú móvil */
   width: 24px;
   height: 24px;
-  /* Puedes usar SVG o fuentes de iconos aquí */
 }
 
-/* Estilos para el menú desplegable en pantallas pequeñas */
+/* === Menú móvil desplegable === */
 .mobileNavList {
-  display: none; /* Oculto por defecto */
-  list-style: none;
-  padding: 0;
+  display: none;
+  flex-direction: column;
   margin-top: 1rem;
   background-color: #f8f9fa;
   border: 1px solid #ddd;
   border-radius: 5px;
+  list-style: none;
+  padding: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobileNavList.open {
+  display: flex;
 }
 
 .mobileNavItem {
   padding: 0.75rem 1.5rem;
   border-bottom: 1px solid #eee;
+}
 
-  &:last-child {
-    border-bottom: none;
-  }
+.mobileNavItem:last-child {
+  border-bottom: none;
 }
 
 .mobileNavLink {
@@ -115,17 +128,13 @@
   font-size: 1rem;
 }
 
-/* Media query para pantallas más pequeñas */
+/* === Responsive === */
 @media (max-width: 768px) {
   .navList {
-    display: none; /* Ocultar la lista de navegación principal */
+    display: none;
   }
 
   .mobileMenuButton {
-    display: block; /* Mostrar el botón del menú móvil */
-  }
-
-  .mobileNavList.open {
-    display: block; /* Mostrar el menú móvil cuando esté abierto */
+    display: block;
   }
 }
