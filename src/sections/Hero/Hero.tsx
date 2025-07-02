@@ -12,12 +12,12 @@ const Hero = () => {
             Landing page profesional por solo <span>$300.000 COP</span>
           </h1>
           <p className={styles.subtitle}>
-            Entregada en solo <strong>72 horas</strong>. Optimizada para conversión,
+            Entregada en solo <strong>3 dias</strong>. Optimizada para conversión,
             diseño moderno y adaptable a cualquier dispositivo. Ideal para emprendedores
             y marcas que quieren destacar.
           </p>
           <div className={styles.buttons}>
-            <LinkButton href="https://wa.me/573024932976" className={styles.cta}>
+            <LinkButton href="https://wa.me/573024932976">
               Quiero mi landing
             </LinkButton>
             <LinkButton href="#beneficios" className={styles.secondary}>

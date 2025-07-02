@@ -1,6 +1,5 @@
 import MainTitle from "@/components/MainTitle/MainTitle";
 import styles from "./CallToAction.module.css";
-import Link from "next/link";
 import LinkButton from "@/components/Button/LinkButton";
 
 const CallToAction = () => {

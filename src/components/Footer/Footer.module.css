@@ -1,7 +1,7 @@
 .footer {
   background: #251e04b3;
   color: #ffeca6;
-  padding: 4rem 2rem 2rem;
+  padding: 4rem 2rem 1rem;
   margin-top: 10rem;
   font-size: 0.95rem;
 }
@@ -21,10 +21,7 @@
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #dfbf49;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
 }
 
 .description {
@@ -88,6 +85,10 @@
   font-size: 0.7rem;
   color: #ffe895;
   letter-spacing: -0.8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .legalLink {

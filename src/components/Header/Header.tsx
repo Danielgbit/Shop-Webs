@@ -1,40 +1,39 @@
+'use client';
+
 import Link from "next/link";
 import styles from "./Header.module.css";
 import LinkButton from "../Button/LinkButton";
-import logo from '../../../public/images/logo.png'
+import logo from '../../../public/images/logo.png';
+import useScrollDirection from "@/hooks/useScrollDirection";
+
+const navItems = [
+  { label: "Inicio", href: "#" },
+  { label: "Qué incluye", href: "#que-incluye" },
+  { label: "Ejemplos", href: "#ejemplos" },
+  { label: "Contacto", href: "#contacto" },
+];
 
 const Header = () => {
+  const scrollDir = useScrollDirection();
+
   return (
-    <>
-      <nav className={styles.navbar}>
-        <img src={logo.src} alt="logo" className={styles.logo} />
-        <ul className={styles.navList}>
-          <li className={styles.navItem}>
-            <Link className={styles.navLink} href="#">
-              Inicio
+    <nav className={`${styles.navbar} ${scrollDir === 'down' ? styles.hidden : ''}`}>
+      <img src={logo.src} alt="logo" className={styles.logo} />
+
+      <ul className={styles.navList}>
+        {navItems.map((item, index) => (
+          <li key={index} className={styles.navItem}>
+            <Link href={item.href} className={styles.navLink}>
+              {item.label}
             </Link>
           </li>
-          <li className={styles.navItem}>
-            <Link className={styles.navLink} href="#">
-              Que incluye
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link className={styles.navLink} href="#">
-              Ejemplos
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link className={styles.navLink} href="#">
-              Contacto
-            </Link>
-          </li>
-        </ul>
-        <LinkButton href="https://wa.me/573024932976" className={styles.button}>
-          ¡Solicita la tuya!
-        </LinkButton>
-      </nav>
-    </>
+        ))}
+      </ul>
+
+      <LinkButton href="https://wa.me/573024932976" className={styles.button}>
+        ¡Solicita la tuya!
+      </LinkButton>
+    </nav>
   );
 };
 

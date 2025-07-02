@@ -4,12 +4,12 @@ const plans = [
   {
     name: "Básico",
     price: "$300.000 COP",
-    features: ["Landing 1 sección", "Responsive", "72 horas", "Hosting 1 año"]
+    features: ["Landing 1 sección", "Responsive", "3 dias", "Hosting 1 año"]
   },
   {
     name: "Premium",
     price: "$450.000 COP",
-    features: ["Hasta 3 secciones", "Texto optimizado", "48 horas", "WhatsApp + SEO"]
+    features: ["Hasta 3 secciones", "Texto optimizado", "1 semana", "WhatsApp + SEO"]
   },
   {
     name: "Pro",

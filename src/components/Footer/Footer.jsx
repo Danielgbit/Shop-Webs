@@ -19,7 +19,7 @@ const Footer = () => {
       <div className={styles.container}>
         {/* Marca */}
         <div className={styles.section}>
-          <Image alt='Logo' src={logo} className={styles.logo}/>
+          <Image width={80} height={80} alt='Logo' src={logo} className={styles.logo}/>
           <p className={styles.description}>
             Creamos landing pages efectivas que generan resultados reales. Entregas rápidas, diseño limpio y enfoque en conversión.
           </p>

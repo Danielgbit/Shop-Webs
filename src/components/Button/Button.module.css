@@ -8,11 +8,11 @@
    font-weight: 600;
    transition: all 0.3s ease-in-out ;
    background-color: #fff1c5;
-   color: #2b2204;
+   color: #4e411a;
 
    &:hover {
     letter-spacing: -0.1px;
-    color: #fde79f;
+    color: #ffeeb8;
     background-color: #8a7530;
    }
 }

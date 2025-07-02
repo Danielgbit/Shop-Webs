@@ -5,7 +5,7 @@ const steps = [
   "Definimos tus objetivos",
   "Te muestro una propuesta visual",
   "Hacemos ajustes si es necesario",
-  "Te entrego la landing en 72 horas",
+  "Te entrego la landing en 3 dias",
   "La publicamos y conectamos con WhatsApp"
 ];
 
