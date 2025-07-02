@@ -25,7 +25,11 @@ export function generateMetadata({
   title = siteMetadata.title,
   description = siteMetadata.description,
   url = siteMetadata.siteUrl,
-}: Partial<typeof siteMetadata> = {}) {
+}: {  
+    title?: string;
+  description?: string;
+  url?: string;
+} = {}) {
   return {
     title,
     description,
