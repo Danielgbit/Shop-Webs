@@ -1,8 +1,17 @@
-import styles from '../Comparison/Comparison.module.css';
+'use client'
+
+import { motion } from "framer-motion";
+import styles from "../Comparison/Comparison.module.css";
 
 export default function Comparison() {
   return (
-    <section className={styles.section}>
+    <motion.section
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      viewport={{ once: false, amount: 0.5 }}
+      className={styles.section}
+    >
       <h2 className={styles.title}>¿Landing o sitio web completo?</h2>
       <table className={styles.table}>
         <thead className={styles.header}>
@@ -30,6 +39,6 @@ export default function Comparison() {
           </tr>
         </tbody>
       </table>
-    </section>
+    </motion.section>
   );
 }

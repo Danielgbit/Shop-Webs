@@ -1,12 +1,22 @@
+'use client'
+
 import DesignedTitle from "@/components/DesignedTitle/DesignedTitle";
 import styles from "./Testimonials.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import MainTitle from "@/components/MainTitle/MainTitle";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
-    <section id="testimonios" className={styles.testimonialsSection}>
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      viewport={{ once: false, amount: 0.5 }}
+      id="testimonios"
+      className={styles.testimonialsSection}
+    >
       <DesignedTitle title="Testimonios" />
       <MainTitle
         className=""
@@ -40,7 +50,7 @@ const Testimonials = () => {
           </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
