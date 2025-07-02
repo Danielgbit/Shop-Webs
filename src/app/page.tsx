@@ -12,10 +12,10 @@ export default function Home() {
   return (
     <div >
       <Hero />
-{/*       <WhatIncluded />
+      <WhatIncluded />
       <Portafolio />
       <Testimonials />
-      <CallToAction />
+{/*       <CallToAction />
       <Pricing/>
       <ProcessSteps/>
       <TargetAudience/>

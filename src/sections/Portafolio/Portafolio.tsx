@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import {
   faHtml5,
@@ -24,7 +24,7 @@ const Portafolio = () => {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.5 }}
+      viewport={{ once: false, amount: 0.1 }}
       id="ejemplos"
       className={styles.portafolioSection}
     >
@@ -48,6 +48,7 @@ const Portafolio = () => {
             height={300}
             src={landingOne.src}
             alt="landing-page-1"
+            sizes="(max-width: 768px) 90vw, 600px"
           />
         </Link>
         <Link
@@ -60,6 +61,7 @@ const Portafolio = () => {
             height={300}
             src={landingTwo.src}
             alt="landing-page-2"
+            sizes="(max-width: 768px) 90vw, 600px"
           />
         </Link>
       </div>

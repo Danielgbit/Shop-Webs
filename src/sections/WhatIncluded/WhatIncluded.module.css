@@ -1,52 +1,93 @@
+/* === Contenedor principal === */
 .container {
-    display: flex;
-    justify-content: space-around;
-    padding: 3rem 0;
-    margin: 15rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem 1rem;
+  margin: 8rem 0;
+  flex-wrap: wrap; /* 🔁 importante para móviles */
+  gap: 3rem;
 }
 
+/* === Contenido textual === */
 .content {
-    display: flex;
-    gap: 5rem;
-    flex-direction: column;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  max-width: 500px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .content {
+    text-align: left;
+  }
 }
 
 .title {
-    letter-spacing: -1px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
 .list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .item {
-    display: flex;
-    align-items: center;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: -0.6px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
 }
 
-.imageWrapper .image{
-    width: 300px;
-    border-radius: 20px;
-    box-shadow: 1px 10px 30px black;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-        transform:translateY(-10px);
-        box-shadow: 1px 10px 30px #4D421E;
-    }
-}
-
+/* === Ícono === */
 .icon {
-    padding: 5px;
-    margin: 5px;
-    margin-right: 20px;
-    background-color: #372c0a;
-    border-radius: 20px;
-    font-size: 1.5rem;
-    color: #fff6d9;
+  padding: 5px;
+  margin-right: 15px;
+  background-color: #372c0a;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  color: #fff6d9;
+  flex-shrink: 0;
+}
+
+/* === Imagen === */
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWrapper .image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 1px 10px 30px black;
+  transition: all 0.3s ease-in-out;
+}
+
+.imageWrapper .image:hover {
+  transform: translateY(-10px);
+  box-shadow: 1px 10px 30px #4d421e;
+}
+
+/* === Responsive para stack en móviles === */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .content {
+    align-items: center;
+  }
+
+  .item {
+    justify-content: left;
+  }
 }

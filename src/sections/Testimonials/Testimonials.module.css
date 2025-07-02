@@ -1,53 +1,98 @@
-.testimonialsSection{
-    display: flex;
+.testimonialsSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem 1rem;
+  padding: 0 1rem;
+}
+
+.title {
+  text-align: center;
+}
+
+/* === Contenedor de testimonios === */
+.testimonialsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 2rem 0;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* === Tarjeta individual === */
+.card {
+  background: linear-gradient(
+    90deg,
+    rgba(77, 66, 30, 0.313) 0%,
+    rgba(120, 93, 25, 0.619) 0%,
+    rgba(0, 0, 0, 0.135) 100%
+  );
+  box-shadow: 2px 3px 4px -2px #eccf6f;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  max-width: 300px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 3px 4px -2px #000000;
+}
+
+/* === Ícono encima de la tarjeta === */
+.card .icon {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  font-size: 2rem;
+  transform: translateX(-50%);
+}
+
+/* === Nombre === */
+.card .name {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* === Contenido de testimonio === */
+.card .content {
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+  color: #fff9e5;
+  line-height: 1.4;
+}
+
+/* === Media Queries específicas === */
+
+/* Teléfonos pequeños */
+@media (max-width: 480px) {
+  .card {
+    max-width: 90%;
+  }
+
+  .card .icon {
+    top: -10%;
+  }
+
+  .card .content {
+    font-size: 11px;
+  }
+}
+
+/* Tablets (hasta 768px) */
+@media (max-width: 768px) {
+  .testimonialsContainer {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 15rem 0;
-
-    .testimonialsContainer {
-        display: flex;
-        gap: 20px;
-        margin: 3% 5%;
-        
-        .card {
-            background: linear-gradient(90deg,rgba(77, 66, 30, 0.313) 0%, rgba(120, 93, 25, 0.619) 0%, rgba(0, 0, 0, 0.135) 100%);
-            box-shadow: 2px 3px 4px -2px #eccf6f;
-            padding: 30px 10px;
-            display: flex;
-            flex-direction: column;
-            border-radius: 20px;
-            position: relative;
-            transition: all 0.3s ease-in-out;
-            
-
-            &:hover {
-                transform: translateY(-10px);
-            box-shadow: 0px 3px 4px -2px #000000;
-
-            }
-
-            .icon{
-                position:absolute;
-                top: -15%;
-                left: 50%;
-                font-size: 2rem;
-                transform: translateX(-50%);
-            }
-
-            .name {
-                text-align: center;
-                font-size: 16px;
-                font-weight: 800;
-                margin-bottom: 20px;
-            }
-
-            .content {
-                text-align: center;
-                font-size: 11px;
-                font-style: italic;
-            }
-
-        }
-    }
+  }
 }
