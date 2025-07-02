@@ -30,8 +30,8 @@ const Footer = () => {
           <h4 className={styles.title}>Navegación</h4>
           <ul className={styles.navList}>
             <li><Link href="/">Inicio</Link></li>
-            <li><Link href="/#beneficios">Beneficios</Link></li>
-            <li><Link href="/#planes">Planes</Link></li>
+            <li><Link href="/#que-incluye">Que incluye</Link></li>
+            <li><Link href="/#contacto">Contacto</Link></li>
             <li><Link href="/#faq">Preguntas</Link></li>
           </ul>
         </div>

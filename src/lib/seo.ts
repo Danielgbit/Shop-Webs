@@ -25,11 +25,13 @@ export function generateMetadata({
   title = siteMetadata.title,
   description = siteMetadata.description,
   url = siteMetadata.siteUrl,
-}: {  
-    title?: string;
+}: {
+  title?: string;
   description?: string;
   url?: string;
 } = {}) {
+  const image = `${siteMetadata.siteUrl}/og-image.jpg`;
+
   return {
     title,
     description,
@@ -41,12 +43,21 @@ export function generateMetadata({
       title,
       description,
       siteName: siteMetadata.title,
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: 'FocusWEB landing preview',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       site: siteMetadata.twitterHandle,
       title,
       description,
+      images: [image],
     },
     metadataBase: new URL(siteMetadata.siteUrl),
     alternates: {

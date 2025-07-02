@@ -5,6 +5,7 @@ import styles from "./Header.module.css";
 import LinkButton from "../Button/LinkButton";
 import logo from '../../../public/images/logo.png';
 import useScrollDirection from "@/hooks/useScrollDirection";
+import Image from "next/image";
 
 const navItems = [
   { label: "Inicio", href: "#" },
@@ -19,7 +20,7 @@ const Header = () => {
 
   return (
     <nav className={`${styles.navbar} ${scrollDir === 'down' ? styles.hidden : ''}`}>
-      <img src={logo.src} alt="logo" className={styles.logo} />
+      <Image width={50} height={50} src={logo.src} alt="logo" className={styles.logo} />
 
       <ul className={styles.navList}>
         {navItems.map((item, index) => (

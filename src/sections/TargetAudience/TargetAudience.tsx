@@ -11,7 +11,7 @@ const personas = [
 
 export default function TargetAudience() {
   return (
-    <section className={styles.section}>
+    <section id='faq' className={styles.section}>
       <h2 className={styles.title}>¿Para quién es esto?</h2>
       <div className={styles.grid}>
         {personas.map((persona, i) => (
