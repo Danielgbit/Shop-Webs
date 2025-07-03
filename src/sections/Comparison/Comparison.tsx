@@ -9,8 +9,9 @@ export default function Comparison() {
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.5 }}
+      viewport={{ once: false, amount: 0.1 }}
       className={styles.section}
+      style={{ overflowX: "auto", width: "100%" }}
     >
       <h2 className={styles.title}>¿Landing o sitio web completo?</h2>
       <table className={styles.table}>

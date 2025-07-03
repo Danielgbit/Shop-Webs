@@ -38,11 +38,12 @@
   max-width: 600px;
   border-radius: 20px;
   transition: all 0.4s ease-in-out;
+  filter: grayscale(1%) brightness(70%);
 }
 
 .imageGallery img:hover {
   cursor: pointer;
-  filter: grayscale(100%) brightness(50%);
+  filter: grayscale(30%) brightness(80%);
   transform: translateY(-5px);
 }
 
@@ -88,7 +89,16 @@
   background-color: #8d7c44;
 }
 
-/* === Media queries específicas === */
+@media (min-width: 822px) {
+  .imageGallery {
+    flex-direction: row;
+  }
+
+  .imageGallery img {
+    height: 200px;
+  }
+}
+
 @media (max-width: 480px) {
   .portafolioSection {
     margin: 5rem 1rem;

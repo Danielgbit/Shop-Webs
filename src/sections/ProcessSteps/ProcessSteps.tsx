@@ -18,7 +18,7 @@ export default function ProcessSteps() {
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.5 }}
+      viewport={{ once: false, amount: 0.1 }}
       className={styles.section}
     >
       <h2 className={styles.title}>¿Cómo funciona el proceso?</h2>

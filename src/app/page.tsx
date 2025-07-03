@@ -15,11 +15,11 @@ export default function Home() {
       <WhatIncluded />
       <Portafolio />
       <Testimonials />
-{/*       <CallToAction />
+      <CallToAction />
       <Pricing/>
       <ProcessSteps/>
       <TargetAudience/>
-      <Comparison/> */}
+      <Comparison/>
     </div>
   );
 }
