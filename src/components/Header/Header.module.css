@@ -1,7 +1,7 @@
 /* === Navbar general === */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 1rem 20px;
   gap: 20px;
@@ -16,6 +16,7 @@
   box-shadow: 0 2px 10px #2e2404;
   transition: transform 0.3s ease-in-out;
   width: calc(100% - 40px);
+  position: relative;
 }
 
 /* Esconde navbar al hacer scroll hacia abajo */
@@ -38,7 +39,7 @@
 
 /* === Lista navegación desktop === */
 .navList {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 2rem;
   list-style: none;
@@ -85,76 +86,21 @@
 
 /* === Botón hamburguesa (visible en móviles) === */
 .mobileMenuButton {
-  display: none;
+  display: flex;
   background: none;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
 }
 
-.mobileMenuIcon {
-  width: 24px;
-  height: 24px;
-  fill: #fffbee;
-}
-
-/* === Menú móvil desplegable === */
-.mobileNavList {
-  display: none;
-  flex-direction: column;
-  margin-top: 5rem;
-  position: absolute;
-  top: 100%;
-  right: 1rem;
-  left: 1rem;
-  background-color: #f8f9fa;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  list-style: none;
-  padding: 1rem 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  z-index: 90;
-}
-
-.mobileNavList.open {
+.navListPhone {
   display: flex;
-}
-
-.mobileNavItem {
-  padding: 0.75rem 1.5rem;
-  border-bottom: 1px solid #eee;
-  text-align: center;
-}
-
-.mobileNavItem:last-child {
-  border-bottom: none;
-}
-
-.mobileNavLink {
-  text-decoration: none;
-  color: #333;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.mobileNavLink:hover {
-  color: #856e23;
-}
-
-/* === Responsive === */
-@media (max-width: 768px) {
-  .navList {
-    display: none;
-  }
-
-  .mobileMenuButton {
-    display: block;
-  }
-}
-
-@media (min-width: 769px) {
-  .mobileMenuButton,
-  .mobileNavList {
-    display: none !important;
-  }
+  flex-direction: column;
+  position: absolute;
+  list-style: none;
+  margin-top: 100%;
+  gap: 10px;
+  align-items: center;
+  background-color: #2e2404;
+  width: 100%;
 }

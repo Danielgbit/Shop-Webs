@@ -7,6 +7,9 @@ import styles from "./Header.module.css";
 import LinkButton from "../Button/LinkButton";
 import logo from "../../../public/images/logo.png";
 import useScrollDirection from "@/hooks/useScrollDirection";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import clsx from "clsx";
 
 const navItems = [
   { label: "Inicio", href: "#" },
@@ -38,20 +41,10 @@ const Header = () => {
       {/* Menú hamburguesa en móviles */}
       <button
         className={styles.mobileMenuButton}
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        onClick={() => setIsMenuOpen(true)}
         aria-label="Abrir menú"
       >
-        <svg
-          className={styles.mobileMenuIcon}
-          viewBox="0 0 100 80"
-          width="24"
-          height="24"
-          fill="#fffbee"
-        >
-          <rect width="100" height="10"></rect>
-          <rect y="30" width="100" height="10"></rect>
-          <rect y="60" width="100" height="10"></rect>
-        </svg>
+        <FontAwesomeIcon icon={faBars} className={styles.mobileMenuButton} />
       </button>
 
       {/* Menú Desktop */}
@@ -69,21 +62,12 @@ const Header = () => {
         </LinkButton>
       </ul>
 
-      {/* Botón Desktop */}
-
-      {/* Menú Móvil */}
-      <ul className={`${styles.mobileNavList} ${isMenuOpen ? "open" : ""}`}>
-        <li className={styles.mobileNavItem}>
-          <Link
-            href="https://wa.me/573024932976"
-            className={styles.mobileNavLink}
-          >
-            ¡Solicita la tuya!
-          </Link>
-        </li>
+      <ul className={clsx(styles.navListPhone, {
+        
+      })}>
         {navItems.map((item, index) => (
-          <li key={index} className={styles.mobileNavItem}>
-            <Link href={item.href} className={styles.mobileNavLink}>
+          <li key={index} className={styles.navItem}>
+            <Link href={item.href} className={styles.navLink}>
               {item.label}
             </Link>
           </li>
