@@ -9,7 +9,6 @@ import logo from "../../../public/images/logo.png";
 import useScrollDirection from "@/hooks/useScrollDirection";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import clsx from "clsx";
 
 const navItems = [
   { label: "Inicio", href: "#" },
@@ -23,6 +22,15 @@ const Header = () => {
   const scrollDir = useScrollDirection();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleMain = () => {
+    if (isMenuOpen === false) {
+      setIsMenuOpen(true);
+    }else {
+      setIsMenuOpen(false);
+    };
+  };
+
+  
   return (
     <nav
       className={`${styles.navbar} ${
@@ -41,7 +49,7 @@ const Header = () => {
       {/* Menú hamburguesa en móviles */}
       <button
         className={styles.mobileMenuButton}
-        onClick={() => setIsMenuOpen(true)}
+        onClick={() => handleMain()}
         aria-label="Abrir menú"
       >
         <FontAwesomeIcon icon={faBars} className={styles.mobileMenuButton} />
@@ -62,9 +70,7 @@ const Header = () => {
         </LinkButton>
       </ul>
 
-      <ul className={clsx(styles.navListPhone, {
-        
-      })}>
+      <ul className={isMenuOpen ? styles.navListPhone : styles.block}>
         {navItems.map((item, index) => (
           <li key={index} className={styles.navItem}>
             <Link href={item.href} className={styles.navLink}>
