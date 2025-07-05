@@ -1,6 +1,6 @@
 .section {
   padding: 10rem 1rem;
-  margin: 20px 0;
+  margin: 20px auto;
 }
 
 .title {
@@ -20,13 +20,16 @@
 .table {
   width: 100%;
   max-width: 800px;
-  margin: 0 auto;
+  margin: auto;
   border-collapse: collapse;
   overflow-x: auto;
-  display: block;
 }
 
 /* Estilo base para celdas */
+.points {
+  font-size: 13px !important;
+}
+
 .points,
 .pointsTitle {
   border: 1px solid #b5a261;
@@ -34,6 +37,7 @@
   text-align: center;
   font-size: 0.75rem;
   white-space: nowrap;
+  letter-spacing: -0.4px;
 }
 
 /* Títulos más grandes desde 768px */
@@ -46,5 +50,18 @@
   .pointsTitle {
     font-size: 0.95rem;
     padding: 1.2rem;
+  }
+}
+
+@media (min-width: 578px) {
+  .table {
+    max-width: 80%;
+  }
+}
+
+
+@media (max-width: 578px) {
+    .table {
+    display: block;
   }
 }
