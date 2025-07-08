@@ -6,7 +6,6 @@ import {
   faInstagram,
   faWhatsapp,
   faFacebook,
-  faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import styles from './Footer.module.css';
@@ -40,7 +39,7 @@ const Footer = () => {
         <div className={styles.contact}>  
           <h4 className={styles.title}>Contacto</h4>
           <a href="mailto:info@FocusWEB.com" className={styles.link}>
-            <FontAwesomeIcon icon={faEnvelope} /> info@FocusWEB.com
+            <FontAwesomeIcon icon={faEnvelope} /> focuswebssite@gmail.com
           </a>
           <a href="https://wa.me/573001112233" target="_blank" className={styles.link}>
             <FontAwesomeIcon icon={faWhatsapp} /> WhatsApp
@@ -51,14 +50,11 @@ const Footer = () => {
         <div className={styles.section}>
           <h4 className={styles.title}>Síguenos</h4>
           <div className={styles.socials}>
-            <a href="https://instagram.com/youraccount" target="_blank" aria-label="Instagram">
+            <a href="https://instagram.com/focusw3b" target="_blank" aria-label="Instagram">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href="https://facebook.com/youraccount" target="_blank" aria-label="Facebook">
+            <a href="https://www.facebook.com/profile.php?id=61567470701712" target="_blank" aria-label="Facebook">
               <FontAwesomeIcon icon={faFacebook} />
-            </a>
-            <a href="https://linkedin.com/in/youraccount" target="_blank" aria-label="LinkedIn">
-              <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </div>
         </div>
@@ -66,7 +62,7 @@ const Footer = () => {
 
       {/* Línea inferior */}
       <div className={styles.bottom}>
-        <p>&copy; {new Date().getFullYear()} FocusWEB. Todos los derechos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} FocusW3B. Todos los derechos reservados.</p>
         <Link href="/privacy-policy" className={styles.legalLink}>
           Política de privacidad
         </Link>
