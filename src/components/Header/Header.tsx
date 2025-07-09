@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import logo from "../../../public/images/logo.png";
 import useScrollDirection from "@/hooks/useScrollDirection";
 import LinkButton from "../Button/LinkButton";
@@ -31,9 +31,16 @@ const Header = () => {
         <Image width={50} height={50} src={logo.src} alt="logo" className={styles.logo} />
       </Link>
 
+      {isMenuOpen ? (
+      <button className={styles.mobileMenuButton} onClick={toggleMenu} aria-label="Abrir menú">
+        <FontAwesomeIcon icon={faClose} className={styles.mobileIcon} />
+      </button>
+      ) : (
       <button className={styles.mobileMenuButton} onClick={toggleMenu} aria-label="Abrir menú">
         <FontAwesomeIcon icon={faBars} className={styles.mobileIcon} />
       </button>
+      )}
+
 
       <ul className={styles.navList}>
         {navItems.map(({ label, href }, index) => (

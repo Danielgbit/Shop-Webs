@@ -85,7 +85,6 @@
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  color: #201901;
   font-size: 1.5rem;
 
   &:hover {
@@ -95,6 +94,7 @@
 
 .mobileIcon {
   font-size: 1.5rem;
+  color: #e0c878;
 }
 
 /* === Menú móvil === */
